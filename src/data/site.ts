@@ -12,7 +12,7 @@ export const nav = [
   { to: "/puppies", label: "Our Puppies" },
   { to: "/about", label: "About" },
   { to: "/adoption", label: "Adoption Process" },
-  { to: "/testimonials", label: "Families" },
+  { to: "/testimonials", label: "Testimonials" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ] as const;
