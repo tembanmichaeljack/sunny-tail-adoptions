@@ -9,7 +9,7 @@ export const testimonials = [
   {
     name: "The Alvarez Family",
     place: "Bend, Oregon",
-    puppy: "Adopted Rosie, 2024",
+    puppy: "Adopted Rosie, 2026",
     photo: family1Asset.url,
     quote:
       "Rosie arrived healthy, calm and already crate trained. Our girls have not stopped smiling since the day she came home.",
@@ -20,7 +20,7 @@ export const testimonials = [
     puppy: "Adopted Finn, 2025",
     photo: family2,
     quote:
-      "Every question we asked was answered within hours. Finn settled into apartment life in under a week — exactly the temperament they described.",
+      "Every question we asked was answered within hours. Finn settled into apartment life in under a week exactly the temperament they described.",
   },
   {
     name: "Walter & Noah",

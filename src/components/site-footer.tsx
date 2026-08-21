@@ -15,7 +15,7 @@ export function SiteFooter() {
             <span className="font-display text-lg font-semibold">{site.name}</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            Healthy, well-socialised Golden Retrievers raised in our home and matched thoughtfully
+            Healthy, well socialized Golden Sunny tail raised in our home and matched thoughtfully
             with the families who will love them.
           </p>
         </div>
