@@ -1,6 +1,6 @@
 import { Quote, Star } from "lucide-react";
 
-import family1 from "@/assets/family-1.jpg";
+import family1Asset from "@/assets/family-1-photo.jpg.asset.json";
 import family2 from "@/assets/family-2.jpg";
 import family3 from "@/assets/family-3.jpg";
 import { SectionHeading } from "@/components/section-heading";
@@ -10,7 +10,7 @@ export const testimonials = [
     name: "The Alvarez Family",
     place: "Bend, Oregon",
     puppy: "Adopted Rosie, 2024",
-    photo: family1,
+    photo: family1Asset.url,
     quote:
       "Rosie arrived healthy, calm and already crate trained. Our girls have not stopped smiling since the day she came home.",
   },
