@@ -46,7 +46,7 @@ const promises = [
   },
   {
     icon: ShieldCheck,
-    title: "Two-year guarantee",
+    title: "Two years guarantee",
     body: "A written genetic health guarantee and lifetime support from us.",
   },
 ];
