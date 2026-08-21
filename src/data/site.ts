@@ -11,7 +11,7 @@ export const nav = [
   { to: "/", label: "Home" },
   { to: "/puppies", label: "Our Puppies" },
   { to: "/about", label: "About" },
-  { to: "/adoption", label: "Adoption" },
+  { to: "/adoption", label: "Adoption Process" },
   { to: "/testimonials", label: "Families" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
