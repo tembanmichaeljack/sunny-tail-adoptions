@@ -1,6 +1,6 @@
 import { Quote, Star } from "lucide-react";
 
-import family1 from "@/assets/family-1.jpg";
+import family1Asset from "@/assets/family-1-photo.jpg.asset.json";
 import family2 from "@/assets/family-2.jpg";
 import family3 from "@/assets/family-3.jpg";
 import { SectionHeading } from "@/components/section-heading";
