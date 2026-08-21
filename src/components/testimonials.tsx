@@ -10,7 +10,7 @@ export const testimonials = [
     name: "The Alvarez Family",
     place: "Bend, Oregon",
     puppy: "Adopted Rosie, 2024",
-    photo: family1,
+    photo: family1Asset.url,
     quote:
       "Rosie arrived healthy, calm and already crate trained. Our girls have not stopped smiling since the day she came home.",
   },
