@@ -1,5 +1,5 @@
 export const site = {
-  name: "Golden Meadow Kennel",
+  name: "Golden Sunny Tail",
   tagline: "Family-raised Golden Retriever puppies",
   email: "hello@goldenmeadowkennel.com",
   phone: "+1 (555) 214-8890",
