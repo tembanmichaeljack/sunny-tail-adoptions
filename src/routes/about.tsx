@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-goldens.jpg";
 import family1 from "@/assets/family-1.jpg";
 import { SectionHeading } from "@/components/section-heading";
 
-const title = "About Our Kennel — Golden Meadow Kennel";
+const title = "About Our Kennel — Golden Sunny Tail";
 const description =
   "A small family breeding program in Salem, Oregon raising health-tested Golden Retrievers indoors with daily handling and early training.";
 
@@ -51,7 +51,7 @@ function AboutPage() {
               align="left"
               eyebrow="About us"
               title="Twelve years, one breed, done carefully"
-              description="Golden Meadow is a family program on five acres outside Salem, Oregon. We keep two to three litters a year so every puppy is raised underfoot in our house."
+              description="Golden Sunny is a family program on five acres outside Salem, Oregon. We keep two to three litters a year so every puppy is raised underfoot in our house."
             />
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
               Our dogs are family first: they sleep indoors, hike with us on weekends and greet
