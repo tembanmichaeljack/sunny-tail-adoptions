@@ -24,8 +24,8 @@ export const Route = createFileRoute("/adoption")({
 });
 
 const included = [
-  "Written two-year genetic health guarantee",
-  "Age-appropriate vaccinations and deworming",
+  "Written two year genetic health guarantee",
+  "Age appropriate vaccinations and deworming",
   "Microchip registered in your name",
   "Vet health certificate",
   "Starter food, blanket and feeding schedule",
@@ -39,7 +39,7 @@ const delivery = [
   },
   {
     title: "Ground delivery",
-    body: "Door-to-door in a climate-controlled vehicle within a day's drive. Quoted by distance.",
+    body: "Door to door in a climate controlled vehicle within a day's drive. Quoted by distance.",
   },
   {
     title: "Flight nanny",
