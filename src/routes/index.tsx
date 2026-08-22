@@ -71,7 +71,7 @@ function Home() {
               {site.location}
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-              Golden Retriever puppies raised in a home, not a cage.
+              Golden Sunny Tail puppies raised in a home, not a cage.
             </h1>
             <p className="text-balance-pretty mt-5 max-w-xl text-lg text-muted-foreground">
               We breed a small number of litters each year so every puppy gets the handling,
