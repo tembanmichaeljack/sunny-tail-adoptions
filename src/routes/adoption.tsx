@@ -63,6 +63,21 @@ function AdoptionPage() {
 
       <AdoptionProcess />
 
+      <section className="pb-20">
+        <div className="mx-auto w-full max-w-6xl px-5">
+          <div className="rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8">
+            <h2 className="text-xl">Planning to visit us? A quick note before you come 🐾</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              To reserve your spot for a visit and adoption, we kindly ask for a 30% deposit
+              upfront as part of our booking policy. This secures your puppy for you and helps
+              us prepare everything for your arrival — and it goes directly toward the adoption
+              fee. Once you're ready, we'll happily guide you through the next steps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
       <section className="py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 lg:grid-cols-2">
           <div>
