@@ -5,7 +5,15 @@ import family2 from "@/assets/family-2.jpg";
 import family3 from "@/assets/family-3.jpg";
 import { SectionHeading } from "@/components/section-heading";
 
-export const testimonials = [
+type Testimonial = {
+  name: string;
+  place: string;
+  puppy: string;
+  quote: string;
+  photo?: string;
+};
+
+export const testimonials: Testimonial[] = [
   {
     name: "The Alvarez Family",
     place: "Bend, Oregon",
