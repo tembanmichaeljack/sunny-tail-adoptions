@@ -100,14 +100,34 @@ function Home() {
           </div>
 
           <div className="relative">
-            <img
-              src={heroImage}
-              alt="Golden Retriever mother resting in the grass with her litter of puppies"
-              width={1600}
-              height={1008}
-              className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
-            />
+            <div className="animate-float-slow">
+              <img
+                src={heroImage}
+                alt="Golden Retriever mother resting in the grass with her litter of puppies"
+                width={1600}
+                height={1008}
+                className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
+              />
+            </div>
+
+            <div className="animate-float-soft absolute -bottom-6 -left-4 flex items-center gap-3 rounded-2xl border border-border bg-card/95 px-4 py-3 shadow-lift backdrop-blur sm:-left-8">
+              <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-primary">
+                <PawPrint className="size-5" />
+              </span>
+              <div>
+                <p className="font-display text-sm text-foreground">Puppies available now</p>
+                <p className="text-xs text-muted-foreground">Reserve with a details request</p>
+              </div>
+            </div>
+
+            <div className="animate-float-soft absolute -top-5 right-2 rounded-2xl border border-border bg-card/95 px-4 py-2 text-center shadow-soft backdrop-blur [animation-delay:-3s] sm:right-6">
+              <p className="font-display text-lg text-foreground">4.9/5</p>
+              <p className="text-[11px] tracking-wide text-muted-foreground uppercase">
+                Family rated
+              </p>
+            </div>
           </div>
+
         </div>
       </section>
 
