@@ -29,7 +29,7 @@ const care = [
   },
   {
     title: "Early socialisation",
-    body: "From week three, puppies meet children, vacuum noise, car rides, grass, tile and stairs — so nothing is frightening later.",
+    body: "From week three, puppies meet children, vacuum noise, car rides, grass, tile and stairs so nothing is frightening later.",
   },
   {
     title: "A head start on training",
