@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Award, HeartHandshake, ShieldCheck, Stethoscope } from "lucide-react";
+import { Award, HeartHandshake, PawPrint, ShieldCheck, Stethoscope } from "lucide-react";
 
 import heroImage from "@/assets/hero-goldens.jpg";
 import { AdoptionProcess } from "@/components/adoption-process";
@@ -56,8 +56,16 @@ function Home() {
 
   return (
     <>
-      <section className="bg-gradient-cream">
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-cream">
+        <span
+          aria-hidden
+          className="animate-float-drift pointer-events-none absolute -top-24 -left-20 size-72 rounded-full bg-primary/15 blur-3xl"
+        />
+        <span
+          aria-hidden
+          className="animate-float-slow pointer-events-none absolute top-1/3 -right-16 size-80 rounded-full bg-accent/60 blur-3xl"
+        />
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:py-24">
           <div>
             <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
               {site.location}
@@ -92,14 +100,34 @@ function Home() {
           </div>
 
           <div className="relative">
-            <img
-              src={heroImage}
-              alt="Golden Retriever mother resting in the grass with her litter of puppies"
-              width={1600}
-              height={1008}
-              className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
-            />
+            <div className="animate-float-slow">
+              <img
+                src={heroImage}
+                alt="Golden Retriever mother resting in the grass with her litter of puppies"
+                width={1600}
+                height={1008}
+                className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
+              />
+            </div>
+
+            <div className="animate-float-soft absolute -bottom-6 -left-4 flex items-center gap-3 rounded-2xl border border-border bg-card/95 px-4 py-3 shadow-lift backdrop-blur sm:-left-8">
+              <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-primary">
+                <PawPrint className="size-5" />
+              </span>
+              <div>
+                <p className="font-display text-sm text-foreground">Puppies available now</p>
+                <p className="text-xs text-muted-foreground">Reserve with a details request</p>
+              </div>
+            </div>
+
+            <div className="animate-float-soft absolute -top-5 right-2 rounded-2xl border border-border bg-card/95 px-4 py-2 text-center shadow-soft backdrop-blur [animation-delay:-3s] sm:right-6">
+              <p className="font-display text-lg text-foreground">4.9/5</p>
+              <p className="text-[11px] tracking-wide text-muted-foreground uppercase">
+                Family rated
+              </p>
+            </div>
           </div>
+
         </div>
       </section>
 
