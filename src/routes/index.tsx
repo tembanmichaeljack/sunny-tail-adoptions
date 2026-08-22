@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Award, HeartHandshake, ShieldCheck, Stethoscope } from "lucide-react";
+import { Award, HeartHandshake, PawPrint, ShieldCheck, Stethoscope } from "lucide-react";
 
 import heroImage from "@/assets/hero-goldens.jpg";
 import { AdoptionProcess } from "@/components/adoption-process";
