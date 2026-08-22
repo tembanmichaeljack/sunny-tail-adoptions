@@ -3,6 +3,13 @@ import { Quote, Star } from "lucide-react";
 import family1Asset from "@/assets/family-1-photo.jpg.asset.json";
 import family2 from "@/assets/family-2.jpg";
 import family3 from "@/assets/family-3.jpg";
+import family4 from "@/assets/family-4.jpg";
+import family5 from "@/assets/family-5.jpg";
+import family6 from "@/assets/family-6.jpg";
+import family7 from "@/assets/family-7.jpg";
+import family8 from "@/assets/family-8.jpg";
+import family9 from "@/assets/family-9.jpg";
+import family10 from "@/assets/family-10.jpg";
 import { SectionHeading } from "@/components/section-heading";
 
 type Testimonial = {
@@ -42,6 +49,7 @@ export const testimonials: Testimonial[] = [
     name: "The Whitfields",
     place: "Sacramento, California",
     puppy: "Adopted Moose, 2025",
+    photo: family4,
     quote:
       "Moose flew in with a nanny and walked off the plane wagging. Paperwork, vet records and microchip were all ready before we even asked.",
   },
@@ -49,6 +57,7 @@ export const testimonials: Testimonial[] = [
     name: "Priya & Sam",
     place: "Austin, Texas",
     puppy: "Adopted Clover, 2025",
+    photo: family5,
     quote:
       "First time dog owners here. The feeding schedule and the follow up calls made the first month feel easy instead of scary.",
   },
@@ -56,6 +65,7 @@ export const testimonials: Testimonial[] = [
     name: "The Okonkwo Family",
     place: "Denver, Colorado",
     puppy: "Adopted Biscuit, 2024",
+    photo: family6,
     quote:
       "Biscuit hikes with us every weekend and sleeps through the night. Exactly the steady, happy temperament we were promised.",
   },
@@ -63,6 +73,7 @@ export const testimonials: Testimonial[] = [
     name: "Margaret L.",
     place: "Spokane, Washington",
     puppy: "Adopted Willow, 2024",
+    photo: family7,
     quote:
       "I wanted a gentle companion at 68 and got the perfect one. They took the time to match me instead of just selling a puppy.",
   },
@@ -70,6 +81,7 @@ export const testimonials: Testimonial[] = [
     name: "The Brennan Family",
     place: "Portland, Oregon",
     puppy: "Adopted Scout, 2026",
+    photo: family8,
     quote:
       "We visited before adopting and the house was spotless, the puppies confident and clearly loved. That visit sold us instantly.",
   },
@@ -77,6 +89,7 @@ export const testimonials: Testimonial[] = [
     name: "Tyler & Jo",
     place: "Salt Lake City, Utah",
     puppy: "Adopted Honey, 2023",
+    photo: family9,
     quote:
       "Honey is three now and hips, eyes and heart are all perfect. The health guarantee paperwork was real and thorough.",
   },
@@ -84,6 +97,7 @@ export const testimonials: Testimonial[] = [
     name: "The Nakamura Family",
     place: "San Jose, California",
     puppy: "Adopted Kona, 2025",
+    photo: family10,
     quote:
       "Kona was already used to kids, cats and car rides. Coming home was the calmest introduction we could have hoped for.",
   },
