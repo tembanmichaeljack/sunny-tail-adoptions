@@ -70,7 +70,7 @@ function AdoptionPage() {
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               To reserve your spot for a visit and adoption, we kindly ask for a 30% deposit
               upfront as part of our booking policy. This secures your puppy for you and helps
-              us prepare everything for your arrival — and it goes directly toward the adoption
+              us prepare everything for your arrival&nbsp; and it goes directly toward the adoption
               fee. Once you're ready, we'll happily guide you through the next steps.
             </p>
           </div>
