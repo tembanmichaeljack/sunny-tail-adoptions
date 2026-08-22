@@ -145,7 +145,7 @@ function Home() {
       </section>
 
       <AdoptionProcess />
-      <Testimonials />
+      <Testimonials limit={3} />
     </>
   );
 }
