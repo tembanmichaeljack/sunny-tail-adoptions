@@ -176,3 +176,43 @@
 @utility text-balance-pretty {
   text-wrap: pretty;
 }
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes float-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(14px, -22px, 0) scale(1.06);
+  }
+}
+
+@utility animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  animation: float-soft 9s ease-in-out infinite;
+}
+
+@utility animate-float-drift {
+  animation: float-drift 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-soft,
+  .animate-float-slow,
+  .animate-float-drift {
+    animation: none;
+  }
+}
