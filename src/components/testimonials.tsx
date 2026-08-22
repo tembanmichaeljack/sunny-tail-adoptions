@@ -17,7 +17,7 @@ type Testimonial = {
   place: string;
   puppy: string;
   quote: string;
-  photo?: string;
+  photo: string;
 };
 
 export const testimonials: Testimonial[] = [
@@ -103,16 +103,6 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-function initials(name: string) {
-  return name
-    .replace(/^The\s+/i, "")
-    .split(/\s+/)
-    .filter((w) => /[a-z]/i.test(w[0] ?? ""))
-    .slice(0, 2)
-    .map((w) => w[0]!.toUpperCase())
-    .join("");
-}
-
 export function Testimonials({
   heading = true,
   limit,
@@ -134,44 +124,34 @@ export function Testimonials({
         ) : null}
 
         <div
-          className={`grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 ${
+          className={`grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4 ${
             heading ? "mt-10 sm:mt-12" : ""
           }`}
         >
           {items.map((t) => (
             <figure
               key={t.name}
-              className="flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-shadow hover:shadow-lg"
+              className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-shadow hover:shadow-lg"
             >
-              {t.photo ? (
-                <img
-                  src={t.photo}
-                  alt={`${t.name} with their Golden Retriever`}
-                  loading="lazy"
-                  width={1000}
-                  height={800}
-                  className="aspect-[5/4] w-full object-cover"
-                />
-              ) : (
-                <div className="flex items-center gap-4 bg-gradient-cream px-6 py-5">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary">
-                    {initials(t.name)}
-                  </span>
-                  <span className="text-sm font-medium">{t.puppy}</span>
-                </div>
-              )}
-              <figcaption className="flex flex-1 flex-col p-5 sm:p-6">
-                <div className="flex items-center gap-1 text-primary">
+              <img
+                src={t.photo}
+                alt={`${t.name} with their Golden Retriever`}
+                loading="lazy"
+                width={1000}
+                height={800}
+                className="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption className="flex flex-1 flex-col p-4">
+                <div className="flex items-center gap-0.5 text-primary">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-4 fill-current" />
+                    <Star key={i} className="size-3.5 fill-current" />
                   ))}
                 </div>
-                <Quote className="mt-4 size-5 text-primary/40" />
-                <blockquote className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {t.quote}
+                <blockquote className="mt-2 flex-1 text-[13px] leading-relaxed text-muted-foreground">
+                  <Quote className="mb-1 inline size-3.5 text-primary/40" /> {t.quote}
                 </blockquote>
-                <div className="mt-5 border-t border-border pt-4">
-                  <p className="font-medium">{t.name}</p>
+                <div className="mt-3 border-t border-border pt-3">
+                  <p className="text-sm font-medium">{t.name}</p>
                   <p className="text-xs text-muted-foreground">
                     {t.place} · {t.puppy}
                   </p>
