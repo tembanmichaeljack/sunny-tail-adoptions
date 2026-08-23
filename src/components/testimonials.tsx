@@ -16,7 +16,7 @@ type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "The Alvarez Family",
+    name: "Alvarez",
     place: "Bend, Oregon",
     puppy: "Adopted Rosie, 2026",
     photo: family1Photo,
@@ -24,28 +24,28 @@ export const testimonials: Testimonial[] = [
       "Rosie arrived healthy, calm and already crate trained. Our girls have not stopped smiling since the day she came home.",
   },
   {
-    name: "Dana & Chris",
+    name: "Dana",
     place: "Seattle, Washington",
     puppy: "Adopted Finn, 2026",
     photo: family2,
     quote:
-      "Every question we asked was answered within hours. Finn settled into apartment life in under a week exactly the temperament they described.",
+      "Every question we asked was answered within hours. Finn settled into apartment life in under a week exactly the temperament they described. My true companion.",
   },
   {
-    name: "Walter & Noah",
+    name: "Brandy & Braxton",
     place: "Boise, Idaho",
     puppy: "Adopted Pepper, 2026",
     photo: family3,
     quote:
-      "Pepper walks beautifully and is gentle with my grandson. Three years on, they still check in on her birthday.",
+      "Pepper walks beautifully and is gentle with my daughter. Three years on, they still check in on her birthday.",
   },
   {
-    name: "The Whitfields",
+    name: "The Josh's family",
     place: "Sacramento, California",
     puppy: "Adopted Moose, 2026",
     photo: family4,
     quote:
-      "Moose flew in with a nanny and walked off the plane wagging. Paperwork, vet records and microchip were all ready before we even asked.",
+      "Moose flew in with a nanny and walked off the plane wagging. Paperwork, vet records and microchip were all ready before we even asked. We love and are happy to have as part of us.",
   },
 ];
 
