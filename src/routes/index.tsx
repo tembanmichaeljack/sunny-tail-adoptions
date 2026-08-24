@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Award, HeartHandshake, PawPrint, ShieldCheck, Stethoscope } from "lucide-react";
 
-import heroImage from "@/assets/hero-goldens.jpg";
+import heroImage from "@/assets/hero-front.png.asset.json";
 import { AdoptionProcess } from "@/components/adoption-process";
 import { PuppyCard } from "@/components/puppy-card";
 import { SectionHeading } from "@/components/section-heading";
@@ -102,8 +102,8 @@ function Home() {
           <div className="relative">
             <div className="animate-float-slow">
               <img
-                src={heroImage}
-                alt="Golden Retriever mother resting in the grass with her litter of puppies"
+                src={heroImage.url}
+                alt="A young Golden Retriever puppy smiling on a cobblestone path"
                 width={1600}
                 height={1008}
                 className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
