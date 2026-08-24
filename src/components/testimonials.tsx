@@ -99,7 +99,7 @@ export function Testimonials({
                 <div className="mt-3 border-t border-border pt-3">
                   <p className="text-sm font-medium">{t.name}</p>
                   <p className="text-xs text-muted-foreground">
-                    {t.place} · {t.puppy}
+                    {t.puppy}
                   </p>
                 </div>
               </figcaption>
