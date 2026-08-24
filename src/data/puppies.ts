@@ -30,7 +30,7 @@ export const puppies: Puppy[] = [
     age: "9 weeks",
     color: "Warm apricot gold",
     weight: "8 lbs",
-    price: "$1,450",
+    price: "$950",
     status: "Available",
     temperament: ["Gentle", "Cuddly", "Quick learner"],
     description:
@@ -45,7 +45,7 @@ export const puppies: Puppy[] = [
     age: "10 weeks",
     color: "Bright white cream",
     weight: "11 lbs",
-    price: "$1,600",
+    price: "$1,100",
     status: "Available",
     temperament: ["Confident", "Playful", "Loyal"],
     description:
@@ -60,7 +60,7 @@ export const puppies: Puppy[] = [
     age: "8 weeks",
     color: "Cream with apricot ears",
     weight: "7 lbs",
-    price: "$1,400",
+    price: "$890",
     status: "Reserved",
     temperament: ["Sweet", "Observant", "Easy-going"],
     description:
@@ -75,7 +75,7 @@ export const puppies: Puppy[] = [
     age: "11 weeks",
     color: "Soft apricot cream",
     weight: "12 lbs",
-    price: "$1,550",
+    price: "$1,600",
     status: "Available",
     temperament: ["Energetic", "Social", "Food motivated"],
     description:
@@ -90,7 +90,7 @@ export const puppies: Puppy[] = [
     age: "9 weeks",
     color: "Ivory cream",
     weight: "9 lbs",
-    price: "$1,500",
+    price: "$1,000",
     status: "Available",
     temperament: ["Affectionate", "Snuggly", "Calm"],
     description:
@@ -105,7 +105,7 @@ export const puppies: Puppy[] = [
     age: "10 weeks",
     color: "Pale champagne cream",
     weight: "9 lbs",
-    price: "$1,650",
+    price: "$1,300",
     status: "Available",
     temperament: ["Curious", "Clever", "Devoted"],
     description:
