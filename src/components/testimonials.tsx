@@ -1,9 +1,9 @@
 import { Quote, Star } from "lucide-react";
 
 import family1Photo from "@/assets/family-1-photo.jpg";
-import familyDana from "@/assets/family-dana.jpg.asset.json";
-import familyBrandy from "@/assets/family-brandy.jpg.asset.json";
-import familyJoshs from "@/assets/family-joshs.jpg.asset.json";
+import familyDana from "@/assets/family-dana.jpg";
+import familyBrandy from "@/assets/family-brandy.jpg";
+import familyJoshs from "@/assets/family-joshs.jpg";
 import { SectionHeading } from "@/components/section-heading";
 
 type Testimonial = {
@@ -27,7 +27,7 @@ export const testimonials: Testimonial[] = [
     name: "Dana",
     place: "Seattle, Washington",
     puppy: "Adopted Finn, 2026",
-    photo: familyDana.url,
+    photo: familyDana,
     quote:
       "Every question we asked was answered within hours. Finn settled into apartment life in under a week exactly the temperament they described. My true companion.",
   },
@@ -35,7 +35,7 @@ export const testimonials: Testimonial[] = [
     name: "Brandy & Braxton",
     place: "Boise, Idaho",
     puppy: "Adopted Pepper, 2026",
-    photo: familyBrandy.url,
+    photo: familyBrandy,
     quote:
       "Pepper walks beautifully and is gentle with my daughter. Three years on, they still check in on her birthday.",
   },
@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
     name: "The Josh's family",
     place: "Sacramento, California",
     puppy: "Adopted Moose, 2025",
-    photo: familyJoshs.url,
+    photo: familyJoshs,
     quote:
       "Moose flew in with a nanny and walked off the plane wagging. Paperwork, vet records and microchip were all ready before we even asked. We love and are happy to have as part of us.",
   },
