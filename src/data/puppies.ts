@@ -1,16 +1,10 @@
-import puppy1Asset from "@/assets/puppy-1.jpg.asset.json";
-import puppy2Asset from "@/assets/puppy-2.jpg.asset.json";
-import puppy3Asset from "@/assets/puppy-3.jpg.asset.json";
-import puppy4Asset from "@/assets/puppy-4.jpg.asset.json";
-import puppy5Asset from "@/assets/puppy-5.jpg.asset.json";
-import puppy6Asset from "@/assets/puppy-6.jpg.asset.json";
+import puppy1 from "@/assets/puppy-1.jpg";
+import puppy2 from "@/assets/puppy-2.jpg";
+import puppy3 from "@/assets/puppy-3.jpg";
+import puppy4 from "@/assets/puppy-4.jpg";
+import puppy5 from "@/assets/puppy-5.jpg";
+import puppy6 from "@/assets/puppy-6.jpg";
 
-const puppy1 = puppy1Asset.url;
-const puppy2 = puppy2Asset.url;
-const puppy3 = puppy3Asset.url;
-const puppy4 = puppy4Asset.url;
-const puppy5 = puppy5Asset.url;
-const puppy6 = puppy6Asset.url;
 
 export type Puppy = {
   id: string;
