@@ -2,7 +2,7 @@ import { Quote, Star } from "lucide-react";
 
 import family1Photo from "@/assets/family-1-photo.jpg";
 import family2 from "@/assets/family-2.jpg";
-import family3 from "@/assets/family-3.jpg";
+import familyBrandy from "@/assets/family-brandy.jpg.asset.json";
 import familyJoshs from "@/assets/family-joshs.jpg.asset.json";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -35,7 +35,7 @@ export const testimonials: Testimonial[] = [
     name: "Brandy & Braxton",
     place: "Boise, Idaho",
     puppy: "Adopted Pepper, 2026",
-    photo: family3,
+    photo: familyBrandy.url,
     quote:
       "Pepper walks beautifully and is gentle with my daughter. Three years on, they still check in on her birthday.",
   },
