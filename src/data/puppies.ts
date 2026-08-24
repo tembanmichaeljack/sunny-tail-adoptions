@@ -1,9 +1,16 @@
-import puppy1 from "@/assets/puppy-1.jpg";
-import puppy2 from "@/assets/puppy-2.jpg";
-import puppy3 from "@/assets/puppy-3.jpg";
-import puppy4 from "@/assets/puppy-4.jpg";
-import puppy5 from "@/assets/puppy-5.jpg";
-import puppy6 from "@/assets/puppy-6.jpg";
+import puppy1Asset from "@/assets/puppy-1.jpg.asset.json";
+import puppy2Asset from "@/assets/puppy-2.jpg.asset.json";
+import puppy3Asset from "@/assets/puppy-3.jpg.asset.json";
+import puppy4Asset from "@/assets/puppy-4.jpg.asset.json";
+import puppy5Asset from "@/assets/puppy-5.jpg.asset.json";
+import puppy6Asset from "@/assets/puppy-6.jpg.asset.json";
+
+const puppy1 = puppy1Asset.url;
+const puppy2 = puppy2Asset.url;
+const puppy3 = puppy3Asset.url;
+const puppy4 = puppy4Asset.url;
+const puppy5 = puppy5Asset.url;
+const puppy6 = puppy6Asset.url;
 
 export type Puppy = {
   id: string;
@@ -27,7 +34,7 @@ export const puppies: Puppy[] = [
     image: puppy1,
     sex: "Female",
     age: "9 weeks",
-    color: "Light cream",
+    color: "Warm apricot gold",
     weight: "8 lbs",
     price: "$1,450",
     status: "Available",
@@ -42,13 +49,13 @@ export const puppies: Puppy[] = [
     image: puppy2,
     sex: "Male",
     age: "10 weeks",
-    color: "Deep red gold",
+    color: "Bright white cream",
     weight: "11 lbs",
     price: "$1,600",
     status: "Available",
     temperament: ["Confident", "Playful", "Loyal"],
     description:
-      "Cooper is bold, bright and full of joy. He is the first to greet visitors and the last to leave a game of fetch. His deep red coat comes from a champion field line, and he already retrieves a soft toy across the yard. Best suited to an active family with a fenced yard and time for daily play.",
+      "Cooper is bold, bright and full of joy. He is the first to greet visitors and the last to leave a game of fetch. His bright white cream coat comes from a champion line, and he already retrieves a soft toy across the yard. Best suited to an active family with a fenced yard and time for daily play.",
     included: ["Vet health check", "First vaccinations & deworming", "Microchip", "Two-year health guarantee"],
   },
   {
@@ -57,7 +64,7 @@ export const puppies: Puppy[] = [
     image: puppy3,
     sex: "Female",
     age: "8 weeks",
-    color: "Golden",
+    color: "Cream with apricot ears",
     weight: "7 lbs",
     price: "$1,400",
     status: "Reserved",
@@ -72,7 +79,7 @@ export const puppies: Puppy[] = [
     image: puppy4,
     sex: "Male",
     age: "11 weeks",
-    color: "Light golden",
+    color: "Soft apricot cream",
     weight: "12 lbs",
     price: "$1,550",
     status: "Available",
@@ -87,13 +94,13 @@ export const puppies: Puppy[] = [
     image: puppy5,
     sex: "Male",
     age: "9 weeks",
-    color: "Cream",
+    color: "Ivory cream",
     weight: "9 lbs",
     price: "$1,500",
     status: "Available",
     temperament: ["Affectionate", "Snuggly", "Calm"],
     description:
-      "Biscuit is happiest pressed against someone he loves. Raised alongside his sister, he is well socialised with other dogs and completely unbothered by household noise. He naps on cue, travels well in the car, and has the classic broad, soft English-cream head.",
+      "Biscuit is happiest pressed against someone he loves. Raised alongside his sister, he is well socialised with other dogs and completely unbothered by household noise. He naps on cue, travels well in the car, and has a soft ivory cream coat that stays bright with easy brushing.",
     included: ["Vet health check", "First vaccinations & deworming", "Microchip", "Comfort blanket from home"],
   },
   {
@@ -102,7 +109,7 @@ export const puppies: Puppy[] = [
     image: puppy6,
     sex: "Female",
     age: "10 weeks",
-    color: "Cream with gold ears",
+    color: "Pale champagne cream",
     weight: "9 lbs",
     price: "$1,650",
     status: "Available",
