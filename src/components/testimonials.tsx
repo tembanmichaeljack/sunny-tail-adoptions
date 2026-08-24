@@ -3,7 +3,7 @@ import { Quote, Star } from "lucide-react";
 import family1Photo from "@/assets/family-1-photo.jpg";
 import family2 from "@/assets/family-2.jpg";
 import family3 from "@/assets/family-3.jpg";
-import family4 from "@/assets/family-4.jpg";
+import familyJoshs from "@/assets/family-joshs.jpg.asset.json";
 import { SectionHeading } from "@/components/section-heading";
 
 type Testimonial = {
@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
     name: "The Josh's family",
     place: "Sacramento, California",
     puppy: "Adopted Moose, 2026",
-    photo: family4,
+    photo: familyJoshs.url,
     quote:
       "Moose flew in with a nanny and walked off the plane wagging. Paperwork, vet records and microchip were all ready before we even asked. We love and are happy to have as part of us.",
   },
