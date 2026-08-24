@@ -42,7 +42,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "The Josh's family",
     place: "Sacramento, California",
-    puppy: "Adopted Moose, 2026",
+    puppy: "Adopted Moose, 2025",
     photo: familyJoshs.url,
     quote:
       "Moose flew in with a nanny and walked off the plane wagging. Paperwork, vet records and microchip were all ready before we even asked. We love and are happy to have as part of us.",
