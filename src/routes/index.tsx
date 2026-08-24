@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Award, HeartHandshake, PawPrint, ShieldCheck, Stethoscope } from "lucide-react";
 
-import heroImage from "@/assets/hero-goldens.jpg";
+import heroImage from "@/assets/hero-front.png.asset.json";
 import { AdoptionProcess } from "@/components/adoption-process";
 import { PuppyCard } from "@/components/puppy-card";
 import { SectionHeading } from "@/components/section-heading";
