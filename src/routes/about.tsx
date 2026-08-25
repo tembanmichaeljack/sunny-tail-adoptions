@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroImage from "@/assets/hero-goldens.jpg";
-import family1 from "@/assets/family-1.jpg";
 import { SectionHeading } from "@/components/section-heading";
 
 const title = "About Our Kennel — Golden Sunny Tail";
@@ -41,6 +39,69 @@ const care = [
   },
 ];
 
+const floatingDetails = [
+  { label: "🐾", className: "left-[10%] top-[12%] text-3xl text-primary animate-float-soft" },
+  { label: "♡", className: "right-[16%] top-[18%] text-4xl text-honey animate-float-slow" },
+  { label: "✦", className: "left-[22%] top-[38%] text-2xl text-muted-foreground animate-float-drift" },
+  { label: "骨", className: "right-[20%] top-[48%] text-3xl text-forest animate-float-soft" },
+  { label: "🐾", className: "left-[16%] bottom-[18%] text-2xl text-forest animate-float-slow" },
+  { label: "✧", className: "right-[12%] bottom-[16%] text-3xl text-primary animate-float-drift" },
+];
+
+const doodles = [
+  { className: "left-[50%] top-[24%] h-16 w-16 text-forest animate-float-slow" },
+  { className: "right-[30%] bottom-[28%] h-12 w-12 text-primary animate-float-soft" },
+];
+
+function PuppyDoodle({ className }: { className: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 80 80"
+      fill="none"
+      className={`absolute ${className}`}
+    >
+      <path
+        d="M28 36c0-9 6-16 14-16s14 7 14 16c0 11-6 20-14 20S28 47 28 36Z"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <path
+        d="M29 31c-8-7-15-4-17 4-2 9 5 16 14 13M55 31c8-7 15-4 17 4 2 9-5 16-14 13"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <path d="M36 41h.1M48 41h.1" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+      <path d="M40 49c2 2 4 2 6 0" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function PuppyDecorPanel({ variant = "full" }: { variant?: "full" | "compact" }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`relative isolate overflow-hidden rounded-[2rem] border border-border bg-gradient-cream shadow-lift ${
+        variant === "full" ? "min-h-[360px] lg:min-h-[440px]" : "min-h-[280px] lg:min-h-[340px]"
+      }`}
+    >
+      <div className="absolute inset-8 rounded-[1.5rem] border border-border/70 bg-card/45" />
+      <div className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/30 bg-card/70 shadow-soft" />
+      <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15" />
+      {floatingDetails.map((detail) => (
+        <span key={`${variant}-${detail.label}-${detail.className}`} className={`absolute ${detail.className}`}>
+          {detail.label}
+        </span>
+      ))}
+      {doodles.map((doodle) => (
+        <PuppyDoodle key={`${variant}-${doodle.className}`} className={doodle.className} />
+      ))}
+    </div>
+  );
+}
+
 function AboutPage() {
   return (
     <>
@@ -59,14 +120,7 @@ function AboutPage() {
               and easy to live with.
             </p>
           </div>
-          <img
-            src={heroImage}
-            alt="Golden Retriever mother with her litter outside the kennel"
-            loading="lazy"
-            width={1600}
-            height={1008}
-            className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
-          />
+          <PuppyDecorPanel />
         </div>
       </section>
 
@@ -86,14 +140,7 @@ function AboutPage() {
 
       <section className="pb-4">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
-          <img
-            src={family1}
-            alt="A family holding their newly adopted Golden Retriever puppies"
-            loading="lazy"
-            width={1000}
-            height={800}
-            className="aspect-[5/4] w-full rounded-[2rem] object-cover shadow-lift"
-          />
+          <PuppyDecorPanel variant="compact" />
           <div>
             <h2 className="text-3xl">Our promise to you</h2>
             <p className="mt-4 text-muted-foreground">
