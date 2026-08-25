@@ -60,7 +60,7 @@ export const puppies: Puppy[] = [
     age: "8 weeks",
     color: "Cream with apricot ears",
     weight: "7 lbs",
-    price: "$890",
+    price: "$1000",
     status: "Reserved",
     temperament: ["Sweet", "Observant", "Easy-going"],
     description:
