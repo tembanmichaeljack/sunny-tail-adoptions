@@ -146,7 +146,7 @@ function AboutPage() {
             <p className="mt-4 text-muted-foreground">
               You get honest answers, real photos of the actual puppy, and a written health
               guarantee. If life changes and you can no longer keep your golden, they come back to
-              us — for the whole of their life.
+              us  for the whole of their life.
             </p>
           </div>
         </div>
