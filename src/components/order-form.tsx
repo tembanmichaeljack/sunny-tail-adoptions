@@ -100,7 +100,7 @@ export function OrderForm({ puppyId, compact = false }: { puppyId?: string; comp
         Submit order request
       </Button>
       <p className="text-center text-xs text-muted-foreground">
-        No payment now — we confirm availability first.
+        No payment now  we confirm availability first.
       </p>
     </form>
   );
