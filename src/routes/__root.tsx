@@ -80,10 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Golden Meadow Kennel — Golden Retriever Puppies" },
+      { title: "Golden Sunny Tail — Golden Retriever Puppies" },
       {
         name: "description",
-        content: "Family-raised, health-tested Golden Retriever puppies in Salem, Oregon.",
+        content: "Family-raised, health-tested Golden Retriever puppies. Browse available puppies and reserve your new companion.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

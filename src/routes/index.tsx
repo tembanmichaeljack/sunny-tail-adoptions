@@ -10,9 +10,10 @@ import { Button } from "@/components/ui/button";
 import { puppies } from "@/data/puppies";
 import { site } from "@/data/site";
 
-const title = "Golden Meadow Kennel — Family-Raised Golden Retriever Puppies";
+const title = "Golden Sunny Tail — Family-Raised Golden Retriever Puppies";
 const description =
-  "Health-tested, home-raised Golden Retriever puppies in Salem, Oregon. Browse available puppies, see full details and reserve your companion.";
+  "Family-raised, health-tested Golden Retriever puppies. Browse available puppies, view full details, and reserve your new companion today.";
+const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,8 +22,25 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: canonicalUrl },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Golden Sunny Tail" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+    ],
+    links: [{ rel: "canonical", href: canonicalUrl }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Golden Sunny Tail",
+          url: canonicalUrl,
+          description,
+        }),
+      },
     ],
   }),
   component: Home,
