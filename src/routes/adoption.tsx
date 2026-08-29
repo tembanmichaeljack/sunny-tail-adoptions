@@ -5,9 +5,11 @@ import { AdoptionProcess } from "@/components/adoption-process";
 import { OrderForm } from "@/components/order-form";
 import { SectionHeading } from "@/components/section-heading";
 
-const title = "Adoption Process & Order Form — Golden Meadow Kennel";
+const title = "Adoption Process & Order Form — Golden Sunny Tail";
 const description =
   "How to adopt a Golden Retriever puppy: browse and choose, fill out the order form, then confirm pickup or delivery.";
+
+const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/adoption";
 
 export const Route = createFileRoute("/adoption")({
   head: () => ({
@@ -16,9 +18,14 @@ export const Route = createFileRoute("/adoption")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: canonicalUrl },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Golden Sunny Tail" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: canonicalUrl }],
   }),
   component: AdoptionPage,
 });
@@ -54,6 +61,7 @@ function AdoptionPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Adoption"
             title="Bringing your puppy home"
             description="A short, clear path from the first photo you fall for to the day your puppy arrives."

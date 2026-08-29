@@ -5,9 +5,11 @@ import { OrderForm } from "@/components/order-form";
 import { SectionHeading } from "@/components/section-heading";
 import { site } from "@/data/site";
 
-const title = "Contact Golden Meadow Kennel";
+const title = "Contact Golden Sunny Tail";
 const description =
-  "Reach our Salem, Oregon kennel by email or phone, or send the order form to reserve a Golden Retriever puppy.";
+  "Reach us by email or phone, or send the order form to reserve a family-raised Golden Retriever puppy.";
+
+const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -16,9 +18,14 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: canonicalUrl },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Golden Sunny Tail" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: canonicalUrl }],
   }),
   component: ContactPage,
 });
@@ -42,6 +49,7 @@ function ContactPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Contact"
             title="Talk to us about a puppy"
             description="We answer most messages within 24 hours."

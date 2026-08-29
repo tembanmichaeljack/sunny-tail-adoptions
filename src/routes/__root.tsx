@@ -102,6 +102,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "apple-touch-icon", href: "/favicon.png" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Golden Sunny Tail",
+          url: "https://sunny-tail-adoptions.lovable.app",
+          description:
+            "Family-raised, health-tested Golden Retriever puppies matched thoughtfully with their families.",
+          logo: "https://sunny-tail-adoptions.lovable.app/favicon.png",
+          email: "goldensunnytail@gmail.com",
+          telephone: "+13474606164",
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: "goldensunnytail@gmail.com",
+              telephone: "+13474606164",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

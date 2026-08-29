@@ -6,9 +6,11 @@ import { PuppyCard } from "@/components/puppy-card";
 import { SectionHeading } from "@/components/section-heading";
 import { puppies } from "@/data/puppies";
 
-const title = "Available Golden Retriever Puppies — Golden Meadow Kennel";
+const title = "Available Golden Retriever Puppies — Golden Sunny Tail";
 const description =
   "Current Golden Retriever puppies with photos, temperament, pricing and a details view with the order form for each puppy.";
+
+const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/puppies";
 
 export const Route = createFileRoute("/puppies")({
   head: () => ({
@@ -17,9 +19,14 @@ export const Route = createFileRoute("/puppies")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: canonicalUrl },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Golden Sunny Tail" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: canonicalUrl }],
   }),
   component: PuppiesPage,
 });
@@ -31,6 +38,7 @@ function PuppiesPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Our puppies"
             title="Puppies looking for their family"
             description="Each profile lists sex, age, coat, weight and price. Open Details for the full description and the order form."

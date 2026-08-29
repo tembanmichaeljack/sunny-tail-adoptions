@@ -8,9 +8,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const title = "Puppy Adoption FAQ — Golden Meadow Kennel";
+const title = "Puppy Adoption FAQ — Golden Sunny Tail";
 const description =
   "Answers about pricing, health guarantees, delivery, waitlists and caring for a new Golden Retriever puppy.";
+
+const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/faq";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
@@ -19,8 +21,27 @@ export const Route = createFileRoute("/faq")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: canonicalUrl },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Golden Sunny Tail" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+    ],
+    links: [{ rel: "canonical", href: canonicalUrl }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
   }),
   component: FaqPage,
@@ -60,6 +81,7 @@ function FaqPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Questions"
             title="Frequently asked questions"
             description="The things families ask us most before adopting."
