@@ -29,6 +29,20 @@ export const Route = createFileRoute("/faq")({
       { name: "twitter:description", content: description },
     ],
     links: [{ rel: "canonical", href: canonicalUrl }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: FaqPage,
 });
