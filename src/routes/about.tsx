@@ -4,7 +4,9 @@ import { SectionHeading } from "@/components/section-heading";
 
 const title = "About Our Kennel — Golden Sunny Tail";
 const description =
-  "A small family breeding program in Salem, Oregon raising health-tested Golden Retrievers indoors with daily handling and early training.";
+  "A small family breeding program raising health-tested Golden Retrievers indoors with daily handling and early training.";
+
+const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/about";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -13,9 +15,14 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: canonicalUrl },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Golden Sunny Tail" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: canonicalUrl }],
   }),
   component: AboutPage,
 });
