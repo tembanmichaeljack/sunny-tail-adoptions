@@ -28,6 +28,7 @@ function TestimonialsPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Our families"
             title="The homes our puppies grew into"
             description="Send us a photo after your puppy settles in and we'll add your family to this wall."

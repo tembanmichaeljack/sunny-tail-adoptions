@@ -110,6 +110,7 @@ function AboutPage() {
           <div>
             <SectionHeading
               align="left"
+              as="h1"
               eyebrow="About us"
               title="Twelve years, one breed, done carefully"
               description="Golden Sunny is a family program on five acres outside Salem, Oregon. We keep two to three litters a year so every puppy is raised underfoot in our house."

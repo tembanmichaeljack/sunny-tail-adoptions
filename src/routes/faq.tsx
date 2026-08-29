@@ -60,6 +60,7 @@ function FaqPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Questions"
             title="Frequently asked questions"
             description="The things families ask us most before adopting."

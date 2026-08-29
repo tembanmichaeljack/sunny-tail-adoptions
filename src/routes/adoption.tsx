@@ -54,6 +54,7 @@ function AdoptionPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Adoption"
             title="Bringing your puppy home"
             description="A short, clear path from the first photo you fall for to the day your puppy arrives."

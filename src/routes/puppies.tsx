@@ -31,6 +31,7 @@ function PuppiesPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Our puppies"
             title="Puppies looking for their family"
             description="Each profile lists sex, age, coat, weight and price. Open Details for the full description and the order form."

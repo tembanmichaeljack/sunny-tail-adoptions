@@ -42,6 +42,7 @@ function ContactPage() {
         <div className="mx-auto w-full max-w-6xl px-5">
           <SectionHeading
             align="left"
+            as="h1"
             eyebrow="Contact"
             title="Talk to us about a puppy"
             description="We answer most messages within 24 hours."
