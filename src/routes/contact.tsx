@@ -34,7 +34,6 @@ function ContactPage() {
   const details = [
     { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
     {
-      icon: MessageSquare,
       label: "Text us",
       value: site.phone,
       href: `sms:${site.phone.replace(/[^+\d]/g, "")}`,
