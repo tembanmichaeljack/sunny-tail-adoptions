@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageSquare } from "lucide-react";
 
 import { OrderForm } from "@/components/order-form";
 import { SectionHeading } from "@/components/section-heading";
@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 const title = "Contact Golden Sunny Tail";
 const description =
-  "Reach us by email or phone, or send the order form to reserve a family-raised Golden Retriever puppy.";
+  "Reach us by email or text, or send the order form to reserve a family-raised Golden Retriever puppy.";
 
 const canonicalUrl = "https://sunny-tail-adoptions.lovable.app/contact";
 
@@ -34,10 +34,10 @@ function ContactPage() {
   const details = [
     { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
     {
-      icon: Phone,
-      label: "Phone",
+      icon: MessageSquare,
+      label: "Text us",
       value: site.phone,
-      href: `tel:${site.phone.replace(/[^+\d]/g, "")}`,
+      href: `sms:${site.phone.replace(/[^+\d]/g, "")}`,
     },
     { icon: MapPin, label: "Location", value: site.location },
     { icon: Clock, label: "Hours", value: site.hours },
