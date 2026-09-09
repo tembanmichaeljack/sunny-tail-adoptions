@@ -64,9 +64,11 @@ function ContactPage() {
                 key={d.label}
                 className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft"
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
-                  <Icon className="size-5" />
-                </span>
+                {Icon && (
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
+                    <Icon className="size-5" />
+                  </span>
+                )}
                 <div>
                   <p className="text-xs tracking-wide text-muted-foreground uppercase">{d.label}</p>
                   {d.href ? (
