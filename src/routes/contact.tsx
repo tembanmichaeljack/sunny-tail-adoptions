@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, MessageSquare } from "lucide-react";
+import { Clock, Mail, MapPin } from "lucide-react";
 
 import { OrderForm } from "@/components/order-form";
 import { SectionHeading } from "@/components/section-heading";
