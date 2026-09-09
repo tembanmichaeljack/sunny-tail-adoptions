@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, MessageSquare, PawPrint } from "lucide-react";
+import { Mail, PawPrint } from "lucide-react";
 
 import { nav, site } from "@/data/site";
 
@@ -44,12 +44,6 @@ export function SiteFooter() {
               <Mail className="mt-0.5 size-4 text-primary" />
               <a href={`mailto:${site.email}`} className="hover:text-foreground">
                 {site.email}
-              </a>
-            </li>
-            <li className="flex items-start gap-2">
-              <MessageSquare className="mt-0.5 size-4 text-primary" />
-              <a href={`sms:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-foreground">
-                Text us: {site.phone.trim()}
               </a>
             </li>
           </ul>
