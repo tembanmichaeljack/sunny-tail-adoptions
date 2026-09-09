@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, PawPrint, Phone } from "lucide-react";
+import { Mail, MapPin, MessageSquare, PawPrint } from "lucide-react";
 
 import { nav, site } from "@/data/site";
 
@@ -47,9 +47,9 @@ export function SiteFooter() {
               </a>
             </li>
             <li className="flex items-start gap-2">
-              <Phone className="mt-0.5 size-4 text-primary" />
-              <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-foreground">
-                {site.phone}
+              <MessageSquare className="mt-0.5 size-4 text-primary" />
+              <a href={`sms:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-foreground">
+                Text us: {site.phone.trim()}
               </a>
             </li>
           </ul>
