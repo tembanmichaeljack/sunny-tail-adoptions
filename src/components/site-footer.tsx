@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, PawPrint } from "lucide-react";
+import { Mail, MessageSquare, PawPrint } from "lucide-react";
 
 import { nav, site } from "@/data/site";
 
