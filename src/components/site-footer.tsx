@@ -46,8 +46,7 @@ export function SiteFooter() {
                 {site.email}
               </a>
             </li>
-            <li className="flex items-start gap-2">
-              <MessageSquare className="mt-0.5 size-4 text-primary" />
+            <li>
               <a href={`sms:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-foreground">
                 Text us: {site.phone.trim()}
               </a>
