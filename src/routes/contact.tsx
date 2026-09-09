@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, MessageSquare } from "lucide-react";
+import { Clock, Mail, MapPin } from "lucide-react";
 
 import { OrderForm } from "@/components/order-form";
 import { SectionHeading } from "@/components/section-heading";
@@ -34,7 +34,6 @@ function ContactPage() {
   const details = [
     { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
     {
-      icon: MessageSquare,
       label: "Text us",
       value: site.phone,
       href: `sms:${site.phone.replace(/[^+\d]/g, "")}`,
@@ -65,9 +64,11 @@ function ContactPage() {
                 key={d.label}
                 className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft"
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
-                  <Icon className="size-5" />
-                </span>
+                {Icon && (
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
+                    <Icon className="size-5" />
+                  </span>
+                )}
                 <div>
                   <p className="text-xs tracking-wide text-muted-foreground uppercase">{d.label}</p>
                   {d.href ? (
