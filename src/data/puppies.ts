@@ -15,7 +15,7 @@ export type Puppy = {
   color: string;
   weight: string;
   price: string;
-  status: "Available" | "Reserved";
+  status: "Available" | "Reserved" | "Sold";
   temperament: string[];
   description: string;
   included: string[];
@@ -61,7 +61,7 @@ export const puppies: Puppy[] = [
     color: "Cream with apricot ears",
     weight: "7 lbs",
     price: "$1000",
-    status: "Reserved",
+    status: "Sold",
     temperament: ["Sweet", "Observant", "Easy-going"],
     description:
       "Daisy watches the world with her head tilted before joining in. She is quiet, tidy, and the easiest of the litter to settle — perfect for a calmer household or apartment life with regular walks. Already used to grooming, nail trims and gentle handling.",
