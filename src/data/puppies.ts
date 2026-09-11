@@ -4,7 +4,7 @@ import puppy3 from "@/assets/puppy-3.jpg";
 import puppy4 from "@/assets/puppy-4.jpg";
 import puppy5 from "@/assets/puppy-5.jpg";
 import puppy6 from "@/assets/puppy-6.jpg";
-import puppy7 from "@/assets/puppy-7.png.asset.json";
+import puppy7 from "@/assets/puppy-7.png";
 
 
 export type Puppy = {
@@ -116,7 +116,7 @@ export const puppies: Puppy[] = [
   {
     id: "luna",
     name: "Luna",
-    image: puppy7.url,
+    image: puppy7,
     sex: "Female",
     age: "10 weeks",
     color: "Pure snowy white",
