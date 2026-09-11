@@ -4,6 +4,7 @@ import puppy3 from "@/assets/puppy-3.jpg";
 import puppy4 from "@/assets/puppy-4.jpg";
 import puppy5 from "@/assets/puppy-5.jpg";
 import puppy6 from "@/assets/puppy-6.jpg";
+import puppy7 from "@/assets/puppy-7.png.asset.json";
 
 
 export type Puppy = {
@@ -111,5 +112,20 @@ export const puppies: Puppy[] = [
     description:
       "Willow is the thinker. She solves puzzle toys, remembers routines after a day or two, and follows her person from room to room. Her steady, people-focused nature makes her a strong candidate for therapy or service training as well as family life.",
     included: ["Vet health check", "First vaccinations & deworming", "Microchip", "Puzzle toy & food starter"],
+  },
+  {
+    id: "luna",
+    name: "Luna",
+    image: puppy7.url,
+    sex: "Female",
+    age: "10 weeks",
+    color: "Pure snowy white",
+    weight: "5 lbs",
+    price: "$1,200",
+    status: "Available",
+    temperament: ["Gentle", "Curious", "Affectionate"],
+    description:
+      "Luna is a tiny bundle of soft white fluff with a sweet, inquisitive nature. She loves being carried, follows gentle voices, and is already learning to use her potty pad. Her calm personality and loving temperament make her a perfect companion for a quieter home or anyone looking for a loyal lap friend.",
+    included: ["Vet health check", "First vaccinations & deworming", "Microchip", "Soft blanket from home"],
   },
 ];
