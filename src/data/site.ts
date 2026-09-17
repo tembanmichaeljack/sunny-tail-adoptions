@@ -2,7 +2,7 @@ export const site = {
   name: "Golden Sunny Tail",
   tagline: "Family-raised Golden Retriever puppies",
   email: "goldensunnytail@gmail.com",
-  phone: "(559) 382-0756",
+  phone: "9897707712",
   location: "\n",
   hours: "Visits by appointment, 9am – 6pm",
 };
