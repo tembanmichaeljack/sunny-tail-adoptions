@@ -13,16 +13,44 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { puppies } from "@/data/puppies";
+import { supabase } from "@/integrations/supabase/client";
 
 export function OrderForm({ puppyId, compact = false }: { puppyId?: string; compact?: boolean }) {
   const [selected, setSelected] = useState(puppyId ?? "");
+  const [submitting, setSubmitting] = useState(false);
 
   return (
     <form
       className={compact ? "space-y-4" : "space-y-5"}
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
+        if (submitting) return;
         const form = event.currentTarget;
+        const fd = new FormData(form);
+        const str = (k: string, max: number) => {
+          const v = String(fd.get(k) ?? "").trim().slice(0, max);
+          return v || null;
+        };
+        const delivery = String(fd.get("delivery") ?? "pickup");
+        const puppy = puppies.find((p) => p.id === selected);
+        setSubmitting(true);
+        const { error } = await supabase.from("order_requests").insert({
+          full_name: str("name", 200) ?? "",
+          email: str("email", 255) ?? "",
+          phone: str("phone", 50),
+          city_state: str("city", 200),
+          puppy_id: puppy?.id ?? null,
+          puppy_name: puppy?.name ?? null,
+          delivery_method: ["pickup", "ground", "flight"].includes(delivery) ? delivery : "pickup",
+          notes: str("notes", 5000),
+        });
+        setSubmitting(false);
+        if (error) {
+          toast.error("Something went wrong", {
+            description: "Your request wasn't sent. Please try again or email us.",
+          });
+          return;
+        }
         toast.success("Order request received", {
           description: "We'll email you within 24 hours to confirm availability.",
         });
