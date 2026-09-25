@@ -19,7 +19,6 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   const navigate = useNavigate();
-  const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
@@ -29,29 +28,15 @@ function AuthPage() {
     e.preventDefault();
     setBusy(true);
     setMsg(null);
-    if (mode === "signin") {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      setBusy(false);
-      if (error) return setMsg(error.message);
-      navigate({ to: "/admin" });
-    } else {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { emailRedirectTo: `${window.location.origin}/admin` },
-      });
-      setBusy(false);
-      if (error) return setMsg(error.message);
-      if (data.session) navigate({ to: "/admin" });
-      else setMsg("Account created. Check your email and click the confirmation link, then sign in.");
-    }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    setBusy(false);
+    if (error) return setMsg(error.message);
+    navigate({ to: "/admin" });
   }
 
   return (
     <div className="mx-auto max-w-sm px-4 py-20">
-      <h1 className="text-2xl font-semibold text-foreground">
-        {mode === "signin" ? "Admin sign in" : "Create admin account"}
-      </h1>
+      <h1 className="text-2xl font-semibold text-foreground">Admin sign in</h1>
       <form onSubmit={onSubmit} className="mt-6 space-y-4">
         <input
           type="email" required placeholder="Email" value={email}
@@ -67,17 +52,10 @@ function AuthPage() {
           type="submit" disabled={busy}
           className="w-full rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground disabled:opacity-60"
         >
-          {busy ? "Please wait..." : mode === "signin" ? "Sign in" : "Create account"}
+          {busy ? "Please wait..." : "Sign in"}
         </button>
       </form>
       {msg && <p className="mt-4 text-sm text-muted-foreground">{msg}</p>}
-      <button
-        type="button"
-        onClick={() => { setMode(mode === "signin" ? "signup" : "signin"); setMsg(null); }}
-        className="mt-6 text-sm text-muted-foreground underline"
-      >
-        {mode === "signin" ? "First time? Create the admin account" : "Already have an account? Sign in"}
-      </button>
     </div>
   );
 }
