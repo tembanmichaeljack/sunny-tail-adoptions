@@ -8,6 +8,13 @@
       "when": 1790239116617,
       "tag": "0000_create_order_requests",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790296335599,
+      "tag": "0001_admin_roles_and_order_read",
+      "breakpoints": true
     }
   ]
 }
