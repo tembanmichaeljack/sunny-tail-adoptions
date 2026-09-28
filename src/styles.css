@@ -216,3 +216,37 @@
     animation: none;
   }
 }
+
+@keyframes sms-gentle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sms-glow-ripple {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.685 0.145 68 / 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 16px oklch(0.685 0.145 68 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.685 0.145 68 / 0);
+  }
+}
+
+@utility animate-sms-attention {
+  animation:
+    sms-gentle-pulse 2.4s ease-in-out infinite,
+    sms-glow-ripple 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sms-attention {
+    animation: none;
+  }
+}
