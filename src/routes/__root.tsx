@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { FloatingSmsButton } from "@/components/floating-sms-button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Toaster } from "@/components/ui/sonner";
@@ -160,6 +161,7 @@ function RootComponent() {
         </main>
         <SiteFooter />
       </div>
+      <FloatingSmsButton />
       <Toaster position="top-center" />
     </QueryClientProvider>
   );
