@@ -161,6 +161,7 @@ function RootComponent() {
         </main>
         <SiteFooter />
       </div>
+      <FloatingSmsButton />
       <Toaster position="top-center" />
     </QueryClientProvider>
   );
