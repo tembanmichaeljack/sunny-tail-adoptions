@@ -4,14 +4,41 @@ import { ClipboardList, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";
 
-export function ContactActions() {
+type ContactActionsProps = {
+  /** "hero" makes the Message Us action larger with a gentle float and glow (home page only). */
+  emphasis?: "default" | "hero";
+};
+
+const smsHref = `sms:${site.phone.replace(/[^+\d]/g, "")}`;
+
+export function ContactActions({ emphasis = "default" }: ContactActionsProps) {
+  const hero = emphasis === "hero";
+
+  const messageButton = (
+    <Button
+      asChild
+      size="lg"
+      className={
+        hero
+          ? "h-auto min-h-14 rounded-full bg-gradient-sun px-7 py-3.5 text-base shadow-lift transition-[filter,transform] duration-200 hover:scale-[1.04] hover:brightness-105"
+          : undefined
+      }
+    >
+      <a href={smsHref}>
+        <MessageCircle aria-hidden="true" /> Message Us
+      </a>
+    </Button>
+  );
+
   return (
-    <div className="flex flex-wrap gap-3">
-      <Button asChild size="lg">
-        <a href={`sms:${site.phone.replace(/[^+\d]/g, "")}`}>
-          <MessageCircle aria-hidden="true" /> Message Us
-        </a>
-      </Button>
+    <div className="flex flex-wrap items-center gap-3">
+      {hero ? (
+        <span className="animate-sms-hero-float inline-flex rounded-full">
+          <span className="animate-sms-attention-lg inline-flex rounded-full">{messageButton}</span>
+        </span>
+      ) : (
+        messageButton
+      )}
       <Button asChild size="lg" variant="outline">
         <Link to="/contact" hash="order-form">
           <ClipboardList aria-hidden="true" /> Fill Out Form

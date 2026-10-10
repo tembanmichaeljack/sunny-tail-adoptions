@@ -105,7 +105,7 @@ function Home() {
               </Button>
             </div>
             <div className="mt-4">
-              <ContactActions />
+              <ContactActions emphasis="hero" />
             </div>
             <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
               {[
