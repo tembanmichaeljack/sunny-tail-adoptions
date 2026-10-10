@@ -3,6 +3,7 @@ import { Award, HeartHandshake, PawPrint, ShieldCheck, Stethoscope } from "lucid
 
 import heroImage from "@/assets/hero-front.png";
 import { AdoptionProcess } from "@/components/adoption-process";
+import { ContactActions } from "@/components/contact-actions";
 import { PuppyCard } from "@/components/puppy-card";
 import { SectionHeading } from "@/components/section-heading";
 import { Testimonials } from "@/components/testimonials";
@@ -102,6 +103,9 @@ function Home() {
               <Button asChild size="lg" variant="outline">
                 <Link to="/adoption">How adoption works</Link>
               </Button>
+            </div>
+            <div className="mt-4">
+              <ContactActions />
             </div>
             <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
               {[
