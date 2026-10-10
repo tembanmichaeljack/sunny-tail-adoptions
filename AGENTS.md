@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Reuse ContactActions for customer SMS and order-form links, and restrict the shared ContactCta to public pages so private sign-in and admin views remain unchanged.

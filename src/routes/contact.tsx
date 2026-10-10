@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Clock, Mail, MapPin } from "lucide-react";
 
 import { OrderForm } from "@/components/order-form";
+import { ContactActions } from "@/components/contact-actions";
 import { SectionHeading } from "@/components/section-heading";
 import { site } from "@/data/site";
 
@@ -53,6 +54,9 @@ function ContactPage() {
             title="Talk to us about a puppy"
             description="We answer most messages within 24 hours."
           />
+          <div className="mt-6">
+            <ContactActions />
+          </div>
         </div>
       </section>
 
@@ -83,7 +87,7 @@ function ContactPage() {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8">
+          <div id="order-form" className="scroll-mt-24 rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8">
             <h2 className="text-2xl">Order form</h2>
             <p className="mt-2 mb-6 text-sm text-muted-foreground">
               Share your details and the puppy you have in mind.
