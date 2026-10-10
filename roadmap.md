@@ -1,2 +1,2 @@
 - [x] Add clear SMS and form actions to the homepage and public pages.
-- [ ] Verify the form destination and public/private visibility.
+- [x] Verify the form destination and public/private visibility.
