@@ -1,2 +1,4 @@
 - [x] Add clear SMS and form actions to the homepage and public pages.
 - [x] Verify the form destination and public/private visibility.
+- [x] Make the homepage "Message Us" button float with a soft glow.
+- [ ] Update the phone number in the site's structured data (currently an old number) — awaiting owner's go-ahead.
